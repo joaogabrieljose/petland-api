@@ -9,5 +9,5 @@ public class PetlandApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PetlandApiApplication.class, args);
 	}
-
+	
 }
