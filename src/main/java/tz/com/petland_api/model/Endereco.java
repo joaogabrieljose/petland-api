@@ -1,5 +1,6 @@
 package tz.com.petland_api.model;
 
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,16 +10,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Data
-@NoArgsConstructor
+@Embeddable
 @AllArgsConstructor
-@Table(name = "tab_endereco")
-
+@NoArgsConstructor
+@Data
 public class Endereco {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
     private String logradouro;
     private String numero;
 
