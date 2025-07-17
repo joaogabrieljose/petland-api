@@ -1,6 +1,6 @@
-package tz.com.petland_api.model;
+package tz.com.petland_api.model.produto;
 
-import jakarta.persistence.Embedded;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,22 +13,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name = "tab_Produto")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tab_cadastro")
-public class Cadastro {
+public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    //garantir que esse id nao seja intanciado, sera gerenciado pelo spring
     @Setter(AccessLevel.NONE)
     private Integer id;
+    @Column(length = 60, nullable = false)
     private String nome;
 
-    //usa-se embedded para embuti as carateristicas 
-    @Embedded
-    private Perfil Perfil;
-    @Embedded
-    private Endereco enderco;
+    private Double valor;
+    private boolean servico;
+
+    
 }

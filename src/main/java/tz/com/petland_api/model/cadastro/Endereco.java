@@ -1,4 +1,4 @@
-package tz.com.petland_api.model;
+package tz.com.petland_api.model.cadastro;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
