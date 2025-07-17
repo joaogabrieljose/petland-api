@@ -18,19 +18,20 @@ import tz.com.petland_api.repository.CadastroRepository;
 @Component
 public class StartApp implements ApplicationRunner{
 
+    
     @Autowired
     private CadastroRepository repository;
     @Autowired
     private AnimalRepository animalRepository;
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
+/*
         Animal animal = new Animal();
         animal.setNome("Doquesa");
         animal.setAniversario(LocalDate.of(2021,12, 15));
         animal.setEspecie(AnimalEspecie.CACHORRO);
 
-        animalRepository.save(animal);
-    }
+        animalRepository.save(animal); */
+    } 
     
 }
