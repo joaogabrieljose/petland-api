@@ -2,13 +2,15 @@ package tz.com.petland_api.controllers.produtoController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tz.com.petland_api.model.produto.Produto;
-import tz.com.petland_api.useCase.useCaseProduto.UseCaseProduto;
+import tz.com.petland_api.model.useCase.useCaseProduto.UseCaseProduto;
 
 @RestController
 @RequestMapping("/produtos")
@@ -18,15 +20,17 @@ public class ProdutoController {
     private UseCaseProduto useCaseProduto;
 
 
+
     @PostMapping("/")
     public ResponseEntity<Object> create (@RequestBody Produto produto){
-
         try{
             var novoProduto = useCaseProduto.create(produto);
             return ResponseEntity.ok(novoProduto);
-
         }catch(Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+
+    
 }

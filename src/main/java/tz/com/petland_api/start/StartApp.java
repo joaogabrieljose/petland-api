@@ -12,8 +12,8 @@ import tz.com.petland_api.model.animal.AnimalEspecie;
 import tz.com.petland_api.model.cadastro.Cadastro;
 import tz.com.petland_api.model.cadastro.Endereco;
 import tz.com.petland_api.model.cadastro.Perfil;
-import tz.com.petland_api.repository.AnimalRepository;
-import tz.com.petland_api.repository.CadastroRepository;
+import tz.com.petland_api.model.repository.AnimalRepository;
+import tz.com.petland_api.model.repository.CadastroRepository;
 
 @Component
 public class StartApp implements ApplicationRunner{
