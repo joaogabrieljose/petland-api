@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tz.com.petland_api.model.dto.produtoDTO.ProdutoTDO;
+import tz.com.petland_api.model.dto.produtoDTO.ProdutoTDOResponse;
 import tz.com.petland_api.model.produto.Produto;
 import tz.com.petland_api.model.useCase.useCaseProduto.UseCaseProdutoPut;
 
@@ -21,9 +21,9 @@ public class ProdutoControllerGetUpdate {
     private UseCaseProdutoPut useCase;
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> getUpdate(@PathVariable Integer id, @RequestBody ProdutoTDO produtoTDO) {
+    public ResponseEntity<?> getUpdate(@PathVariable Integer id, @RequestBody ProdutoTDOResponse produtoTDO) {
         try {
-            ProdutoTDO atualizado = useCase.updateProduto(id, produtoTDO);
+            ProdutoTDOResponse atualizado = useCase.updateProduto(id, produtoTDO);
             return ResponseEntity.ok(atualizado);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Erro ao atualizar produto: " + e.getMessage());

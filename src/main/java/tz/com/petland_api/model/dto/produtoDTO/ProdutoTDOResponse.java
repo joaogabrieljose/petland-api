@@ -8,17 +8,12 @@ import lombok.NoArgsConstructor;
 import tz.com.petland_api.model.produto.Produto;
 
 @Data
-@AllArgsConstructor
+AllArgsConstructor
 @NoArgsConstructor
-public class ProdutoTDO {
-    private Integer id;       
-    private String nome;
-    private double valor;
-    private boolean servico;
+public class ProdutoTDOResponse extends ProdutoDTORequest{
 
-    public ProdutoTDO(Produto produto){
+    public ProdutoTDOResponse(Produto produto){
         BeanUtils.copyProperties(produto, this);
-        produto.setId(id);
     }
 
     public Produto toEntity() {
