@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 import tz.com.petland_api.model.produto.Produto;
 
 @Data
-AllArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
-public class ProdutoTDOResponse extends ProdutoDTORequest{
 
+public class ProdutoTDOResponse extends ProdutoDTORequest{
     public ProdutoTDOResponse(Produto produto){
         BeanUtils.copyProperties(produto, this);
     }

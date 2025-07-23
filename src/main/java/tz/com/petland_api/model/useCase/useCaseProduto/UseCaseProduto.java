@@ -15,6 +15,9 @@ public class UseCaseProduto {
     private ProdutoRepository repository;
 
     public ProdutoDTORequest create (Produto produto){
+        repository.findByNome(produto.getNome()).ifPresent((use)->{
+            throw new RuntimeException("produto já existe");
+        });
 
         if (produto.getId() != null && repository.findById(produto.getId()).isPresent()) {
             throw new RuntimeException("Produto com esse ID já existe.");

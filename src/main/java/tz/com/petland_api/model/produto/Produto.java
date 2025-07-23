@@ -20,7 +20,7 @@ import lombok.Setter;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Setter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
     private Integer id;
     @Column(length = 60, nullable = false)
     private String nome;

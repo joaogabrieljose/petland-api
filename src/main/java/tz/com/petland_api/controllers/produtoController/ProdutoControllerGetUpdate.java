@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import tz.com.petland_api.model.dto.produtoDTO.ProdutoDTORequest;
 import tz.com.petland_api.model.dto.produtoDTO.ProdutoTDOResponse;
 import tz.com.petland_api.model.produto.Produto;
 import tz.com.petland_api.model.useCase.useCaseProduto.UseCaseProdutoPut;
@@ -21,7 +22,7 @@ public class ProdutoControllerGetUpdate {
     private UseCaseProdutoPut useCase;
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> getUpdate(@PathVariable Integer id, @RequestBody ProdutoTDOResponse produtoTDO) {
+    public ResponseEntity<?> getUpdate(@PathVariable Integer id, @RequestBody ProdutoDTORequest produtoTDO) {
         try {
             ProdutoTDOResponse atualizado = useCase.updateProduto(id, produtoTDO);
             return ResponseEntity.ok(atualizado);
