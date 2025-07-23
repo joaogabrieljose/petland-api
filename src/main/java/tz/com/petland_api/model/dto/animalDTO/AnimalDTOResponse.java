@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 import tz.com.petland_api.model.animal.Animal;
 
 @Data
-@AllArgsConstructor
+
+
 @NoArgsConstructor
 public class AnimalDTOResponse extends AnimalDTORequest{
 
