@@ -19,7 +19,6 @@ public class UseCaseProdutoDelete {
             .orElseThrow(() -> new ResponseStatusException(
                 HttpStatus.NOT_FOUND, "Produto não encontrado com ID: " + id
             ));
-
         repository.delete(produto);
     }
 } 
