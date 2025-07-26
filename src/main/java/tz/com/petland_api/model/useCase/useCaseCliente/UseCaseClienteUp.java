@@ -23,7 +23,7 @@ public class UseCaseClienteUp {
             BeanUtils.copyProperties(request, cadastro);
             repository.save(cadastro);
 
-            return new ClienteDTOResponse(cadastro);s
+            return new ClienteDTOResponse(cadastro);
     }
     
 }
