@@ -17,5 +17,6 @@ public class AnimalDTORequest {
     private String nome;
     private LocalDate aniversario;
     private AnimalEspecie especie;
+    private Integer tutor;
     
 }

@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import tz.com.petland_api.model.cadastro.Cadastro;
 
 @Entity
 @Table(name = "tab_Animal")
@@ -33,6 +34,9 @@ public class Animal {
     
     @Enumerated(EnumType.STRING)
     private AnimalEspecie especie;
+
+    @Column(name = "cad_tutor")
+    private Integer tutor;
 
     
 }

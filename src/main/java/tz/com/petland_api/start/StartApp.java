@@ -25,13 +25,14 @@ public class StartApp implements ApplicationRunner{
     private AnimalRepository animalRepository;
     @Override
     public void run(ApplicationArguments args) throws Exception {
-/*
-        Animal animal = new Animal();
-        animal.setNome("Doquesa");
-        animal.setAniversario(LocalDate.of(2021,12, 15));
-        animal.setEspecie(AnimalEspecie.CACHORRO);
+        /*
+            Animal animal = new Animal();
+            animal.setNome("Doquesa");
+            animal.setAniversario(LocalDate.of(2021,12, 15));
+            animal.setEspecie(AnimalEspecie.CACHORRO);
 
-        animalRepository.save(animal); */
+            animalRepository.save(animal); 
+        */
     } 
     
 }
