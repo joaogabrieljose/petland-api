@@ -1,4 +1,4 @@
-package tz.com.petland_api.controllers.produtoController;
+package tz.com.petland_api.cadastros.controllers.produtoController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tz.com.petland_api.model.produto.Produto;
-import tz.com.petland_api.model.useCase.useCaseProduto.UseCaseProduto;
+import tz.com.petland_api.cadastros.model.produto.Produto;
+import tz.com.petland_api.cadastros.useCase.useCaseProduto.UseCaseProduto;
 
 @RestController
 @RequestMapping("/produtos")

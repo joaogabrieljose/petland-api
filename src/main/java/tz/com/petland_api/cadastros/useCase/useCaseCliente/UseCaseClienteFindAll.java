@@ -1,13 +1,13 @@
-package tz.com.petland_api.model.useCase.useCaseCliente;
+package tz.com.petland_api.cadastros.useCase.useCaseCliente;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tz.com.petland_api.model.cadastro.Cadastro;
-import tz.com.petland_api.model.dto.clienteDTO.ClienteDTOResponse;
-import tz.com.petland_api.model.repository.CadastroRepository;
+import tz.com.petland_api.cadastros.model.cadastro.Cadastro;
+import tz.com.petland_api.cadastros.model.dto.clienteDTO.ClienteDTOResponse;
+import tz.com.petland_api.cadastros.repository.CadastroRepository;
 
 @Service
 public class UseCaseClienteFindAll {

@@ -1,11 +1,11 @@
-package tz.com.petland_api.model.dto.clienteDTO;
+package tz.com.petland_api.cadastros.model.dto.clienteDTO;
 
 import org.springframework.beans.BeanUtils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tz.com.petland_api.model.cadastro.Cadastro;
+import tz.com.petland_api.cadastros.model.cadastro.Cadastro;
 
 @Data
 @AllArgsConstructor

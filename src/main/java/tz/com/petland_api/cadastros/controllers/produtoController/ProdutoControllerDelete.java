@@ -1,4 +1,4 @@
-package tz.com.petland_api.controllers.produtoController;
+package tz.com.petland_api.cadastros.controllers.produtoController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tz.com.petland_api.model.useCase.useCaseProduto.UseCaseProdutoDelete;
+import tz.com.petland_api.cadastros.useCase.useCaseProduto.UseCaseProdutoDelete;
 
 @RestController
 @RequestMapping("/produtos")

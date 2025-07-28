@@ -1,4 +1,4 @@
-package tz.com.petland_api.controllers.animalController;
+package tz.com.petland_api.cadastros.controllers.animalController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tz.com.petland_api.model.useCase.useCaseAnimal.UseCaseAnimalFindAll;
+import tz.com.petland_api.cadastros.useCase.useCaseAnimal.UseCaseAnimalFindAll;
 
 @RestController
 @RequestMapping("/animais")

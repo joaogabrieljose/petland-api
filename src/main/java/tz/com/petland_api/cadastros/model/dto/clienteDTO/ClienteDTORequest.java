@@ -1,11 +1,11 @@
-package tz.com.petland_api.model.dto.clienteDTO;
+package tz.com.petland_api.cadastros.model.dto.clienteDTO;
 
 import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tz.com.petland_api.model.cadastro.Endereco;
-import tz.com.petland_api.model.cadastro.Perfil;
+import tz.com.petland_api.cadastros.model.cadastro.Endereco;
+import tz.com.petland_api.cadastros.model.cadastro.Perfil;
 
 
 @Data

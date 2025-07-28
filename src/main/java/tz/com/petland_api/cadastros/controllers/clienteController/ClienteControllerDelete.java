@@ -1,4 +1,4 @@
-package tz.com.petland_api.controllers.clienteController;
+package tz.com.petland_api.cadastros.controllers.clienteController;
 
 import org.hibernate.id.IncrementGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tz.com.petland_api.model.useCase.useCaseCliente.UseCaseClienteDelete;
+import tz.com.petland_api.cadastros.useCase.useCaseCliente.UseCaseClienteDelete;
 
 @RestController
 @RequestMapping("/clientes")

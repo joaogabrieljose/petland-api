@@ -7,13 +7,10 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import tz.com.petland_api.model.animal.Animal;
-import tz.com.petland_api.model.animal.AnimalEspecie;
-import tz.com.petland_api.model.cadastro.Cadastro;
-import tz.com.petland_api.model.cadastro.Endereco;
-import tz.com.petland_api.model.cadastro.Perfil;
-import tz.com.petland_api.model.repository.AnimalRepository;
-import tz.com.petland_api.model.repository.CadastroRepository;
+import tz.com.petland_api.cadastros.repository.AnimalRepository;
+import tz.com.petland_api.cadastros.repository.CadastroRepository;
+
+
 
 @Component
 public class StartApp implements ApplicationRunner{

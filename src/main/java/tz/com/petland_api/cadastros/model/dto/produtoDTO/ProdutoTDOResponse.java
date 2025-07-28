@@ -13,6 +13,7 @@ import tz.com.petland_api.cadastros.model.produto.Produto;
 @NoArgsConstructor
 
 public class ProdutoTDOResponse extends ProdutoDTORequest{
+    private Integer id;
     public ProdutoTDOResponse(Produto produto){
         BeanUtils.copyProperties(produto, this);
     }

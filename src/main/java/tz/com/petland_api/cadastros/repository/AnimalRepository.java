@@ -1,4 +1,4 @@
-package tz.com.petland_api.model.repository;
+package tz.com.petland_api.cadastros.repository;
 
 
 import java.util.Optional;

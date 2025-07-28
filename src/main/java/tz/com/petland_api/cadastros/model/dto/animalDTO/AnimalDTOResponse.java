@@ -12,6 +12,7 @@ import tz.com.petland_api.cadastros.model.animal.Animal;
 @NoArgsConstructor
 
 public class AnimalDTOResponse extends AnimalDTORequest{
+    private Integer id;
 
     public AnimalDTOResponse(Animal response){
         BeanUtils.copyProperties(response, this);

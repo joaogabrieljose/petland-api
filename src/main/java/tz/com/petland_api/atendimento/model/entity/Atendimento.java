@@ -2,7 +2,10 @@ package tz.com.petland_api.atendimento.model.entity;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,7 +31,20 @@ public class Atendimento {
     private LocalDate data;
     private Double valor;
     private boolean emergente;
+
+    @Enumerated(EnumType.STRING)
     private AtendimentoStatus status;
+
+    @Enumerated(EnumType.STRING)
     private AtandimentoTipo tipo;
+
+    @Column(name = "pet_id")
+    private Integer animal;
+
+    @Column(name = "cad_id")
+    private Integer cadastro;
+    
+    @Column(name = "prod_id")
+    private Integer produto;
 
 }

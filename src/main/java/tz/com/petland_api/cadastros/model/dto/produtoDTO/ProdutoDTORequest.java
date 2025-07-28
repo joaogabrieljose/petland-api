@@ -1,4 +1,4 @@
-package tz.com.petland_api.model.dto.produtoDTO;
+package tz.com.petland_api.cadastros.model.dto.produtoDTO;
 
 import org.springframework.beans.BeanUtils;
 
