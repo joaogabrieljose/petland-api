@@ -17,7 +17,7 @@ public class UseCaseAtendimento {
 
     public AtendimentoResponse createAtendimento(AtendimentoRequest request){
 
-        repository.findByDescricao(request).ifPresent((use)-> {
+        repository.findByDescricao(request.getDescricao()).ifPresent((use)-> {
             throw new RuntimeException("");
         });
         Atendimento atendimento = new Atendimento();

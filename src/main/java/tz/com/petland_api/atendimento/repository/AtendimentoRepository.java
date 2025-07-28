@@ -11,6 +11,6 @@ import tz.com.petland_api.atendimento.model.entity.Atendimento;
 @Repository
 public interface AtendimentoRepository extends JpaRepository<Atendimento, Integer> {
 
-    Optional<Atendimento>findByDescricao(AtendimentoRequest request);
+    Optional<Atendimento>findByDescricao(String request);
     
 }
