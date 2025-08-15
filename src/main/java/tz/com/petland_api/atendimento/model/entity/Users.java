@@ -30,6 +30,12 @@ public class Users implements UserDetails {
     private String login;
     private String password;
     private UserRoiles role;
+
+    public Users (String login, String password, UserRoiles role){
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
   
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
