@@ -25,9 +25,9 @@ public class AuthorizationController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private UserRpository userRpository;
+    private UserRpository userRpository;    
     
-
+    @PostMapping("/login")
     public ResponseEntity<Object> login(@RequestBody @Valid AuthenticationDTO dto){
 
         var usenamePassword = new UsernamePasswordAuthenticationToken(dto.login(), dto.password());
@@ -48,4 +48,5 @@ public class AuthorizationController {
         this.userRpository.save(newUser);
 
         return ResponseEntity.ok().build();
+    }
 }
