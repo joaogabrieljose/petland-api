@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
+import tz.com.petland_api.atendimento.infra.security.TokenService;
 import tz.com.petland_api.atendimento.model.dto.AuthenticationDTO;
+import tz.com.petland_api.atendimento.model.dto.LoginResponseDTO;
 import tz.com.petland_api.atendimento.model.dto.RegisterDTO;
 import tz.com.petland_api.atendimento.model.entity.Users;
 import tz.com.petland_api.atendimento.repository.UserRpository;
@@ -27,14 +29,18 @@ public class AuthorizationController {
     @Autowired
     private UserRpository userRpository;    
     
+    @Autowired
+    private TokenService tokenService;
     @PostMapping("/login")
     public ResponseEntity<Object> login(@RequestBody @Valid AuthenticationDTO dto){
 
         var usenamePassword = new UsernamePasswordAuthenticationToken(dto.login(), dto.password());
 
         var auth = authenticationManager.authenticate(usenamePassword);
-        
-        return ResponseEntity.ok().build();
+
+        var token = tokenService.generationToken((Users)auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDTO(token));
 
     }
 
